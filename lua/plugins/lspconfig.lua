@@ -153,6 +153,7 @@ return {
 				-- python
 				jedi_language_server = {},
 
+				sourcery = {},
 				lua_ls = {
 					-- cmd = {...},
 					-- filetypes = { ...},
@@ -184,6 +185,7 @@ return {
 				"stylua", -- Used to format Lua code
 				"black",
 				"isort",
+				"ruff",
 				"prettierd",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
