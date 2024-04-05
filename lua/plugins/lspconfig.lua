@@ -152,7 +152,6 @@ return {
 				tsserver = {},
 				-- python
 				jedi_language_server = {},
-
 				sourcery = {},
 				lua_ls = {
 					-- cmd = {...},
@@ -187,6 +186,7 @@ return {
 				"isort",
 				"ruff",
 				"prettierd",
+				"eslint_d",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 

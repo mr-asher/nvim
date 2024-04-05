@@ -57,13 +57,16 @@ vim.opt.inccommand = "split"
 -- Show which line your cursor is on
 vim.opt.cursorline = true
 
--- Minimal number of screen lines to keep above and below the cursor.
+-- Minimal number of screen lines to keep above and below the cursor
 vim.opt.scrolloff = 10
 
--- Highlight search text.
+-- Highlight search text
 vim.opt.hlsearch = true
 
 -- File explorer default width
 vim.g.netrw_winsize = 20
+
+-- Set python virtualenv for neovim module
+vim.g.python3_host_prog = "/Users/jaleslie/.pyenv/versions/neovim/bin/python"
 
 -- vim: ts=2 sts=2 sw=2 et
