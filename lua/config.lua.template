@@ -1,0 +1,5 @@
+CONFIG = {
+	python3_host_prog = "/home/asher/.pyenv/versions/neovim/bin/python",
+}
+
+-- vim: ts=2 sts=2 sw=2 et
