@@ -67,6 +67,6 @@ vim.opt.hlsearch = true
 vim.g.netrw_winsize = 20
 
 -- Set python virtualenv for neovim module
-vim.g.python3_host_prog = "/Users/jaleslie/.pyenv/versions/neovim/bin/python"
+vim.g.python3_host_prog = "/home/asher/.pyenv/versions/neovim/bin/python"
 
 -- vim: ts=2 sts=2 sw=2 et
