@@ -16,7 +16,7 @@ vim.opt.relativenumber = true
 vim.opt.mouse = "a"
 
 -- Don't show the mode, since it's already in the status line
-vim.opt.showmode = true
+vim.opt.showmode = false
 
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
@@ -50,8 +50,8 @@ vim.opt.splitbelow = true
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
 --  and `:help 'listchars'`
-vim.opt.list = true
-vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+-- vim.opt.list = true
+-- vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = "split"
@@ -66,7 +66,7 @@ vim.opt.scrolloff = 10
 vim.opt.hlsearch = true
 
 -- File explorer default width
-vim.g.netrw_winsize = 20
+-- vim.g.netrw_winsize = 20
 
 -- Set python virtualenv for neovim module
 vim.g.python3_host_prog = CONFIG.python3_host_prog

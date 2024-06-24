@@ -182,12 +182,44 @@ return {
 			local ensure_installed = vim.tbl_keys(servers or {})
 			vim.list_extend(ensure_installed, {
 				"stylua", -- Used to format Lua code
+				"lua-language-server",
+
+				-- python stuff
+				"jedi-language-server",
 				"black",
 				"isort",
 				"ruff",
+				"djlint",
+				"isort",
+				"sourcery",
+
+				-- javascript stuff
+				"typescript-language-server",
+				"vtsls",
 				"prettierd",
 				"eslint_d",
+
+				-- markdown stuff
+				"marksman",
+				"markdownlint",
+				"markdown-toc",
+				"markdownlint",
+
+				-- docker
+				"docker-compose-language-service",
+				"dockerfile-language-server",
+				"hadolint",
+
+				-- html, css, json, yaml
+				"tailwindcss-language-server",
+				"htmlhint",
+				"yaml-language-server",
+				"json-lsp",
+
+				-- bash
+				"shfmt",
 			})
+
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
 			require("mason-lspconfig").setup({
