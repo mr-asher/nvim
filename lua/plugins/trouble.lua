@@ -1,7 +1,6 @@
 return {
 	{
 		"folke/trouble.nvim",
-		branch = "dev", -- IMPORTANT!
 		keys = {
 			{
 				"<leader>xx",
@@ -37,5 +36,3 @@ return {
 		opts = {}, -- for default options, refer to the configuration section for custom setup.
 	},
 }
-
--- vim: ts=2 sts=2 sw=2 et

@@ -70,5 +70,3 @@ vim.opt.hlsearch = true
 
 -- Set python virtualenv for neovim module
 vim.g.python3_host_prog = CONFIG.python3_host_prog
-
--- vim: ts=2 sts=2 sw=2 et
