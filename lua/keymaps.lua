@@ -50,3 +50,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 		vim.highlight.on_yank()
 	end,
 })
+
+-- In insert mode map jk to exit insert mode.
+vim.keymap.set("i", "jk", "<Esc>")

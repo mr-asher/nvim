@@ -151,7 +151,7 @@ return {
 				-- But for many setups, the LSP (`tsserver`) will work just fine
 				tsserver = {},
 				-- python
-				jedi_language_server = {},
+				-- jedi_language_server = {},
 				sourcery = {},
 				lua_ls = {
 					-- cmd = {...},
@@ -185,12 +185,11 @@ return {
 				"lua-language-server",
 
 				-- python stuff
-				"jedi-language-server",
-				"black",
-				"isort",
+				-- "jedi-language-server",
+				-- "black",
+				-- "isort",
 				"ruff",
 				"djlint",
-				"isort",
 				"sourcery",
 
 				-- javascript stuff
