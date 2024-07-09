@@ -1,29 +1,42 @@
 return {
-	{ -- Autoformat
+	{
+		-- Autoformat
 		"stevearc/conform.nvim",
-		lazy = false,
+		dependencies = { "mason.nvim" },
+		cmd = "ConformInfo",
+		lazy = true,
 		keys = {
 			{
 				"<leader>f",
 				function()
-					require("conform").format({ async = true, lsp_fallback = true })
+					require("conform").format({ timeout_ms = 3000 })
 				end,
-				mode = "",
+				mode = { "n", "v" },
 				desc = "[F]ormat buffer",
 			},
 		},
 		opts = {
+			format = {
+				timeout_ms = 3000,
+				async = false,
+				quiet = false,
+				lsp_format = "fallback",
+			},
 			notify_on_error = false,
-			format_on_save = function(bufnr)
-				-- Disable "format_on_save lsp_fallback" for languages that don't
-				-- have a well standardized coding style. You can add additional
-				-- languages here or re-enable it for the disabled ones.
-				local disable_filetypes = { c = true, cpp = true }
-				return {
-					timeout_ms = 500,
-					lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
-				}
-			end,
+			format_on_save = {
+				timeout_ms = 500,
+				lsp_fallback = "fallback",
+			},
+			-- format_on_save = function(bufnr)
+			-- 	-- Disable "format_on_save lsp_fallback" for languages that don't
+			-- 	-- have a well standardized coding style. You can add additional
+			-- 	-- languages here or re-enable it for the disabled ones.
+			-- 	local disable_filetypes = { c = true, cpp = true }
+			-- 	return {
+			-- 		timeout_ms = 500,
+			-- 		lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
+			-- 	}
+			-- end,
 			formatters_by_ft = {
 				lua = { "stylua" },
 				-- Conform can also run multiple formatters sequentially
@@ -33,8 +46,10 @@ return {
 				-- is found.
 				javascript = { { "prettierd", "prettier" } },
 				htmldjango = { "djlint" },
+
+				-- bash
+				sh = { "shfmt" },
 			},
 		},
 	},
 }
--- vim: ts=2 sts=2 sw=2 et
