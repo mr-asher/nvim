@@ -65,6 +65,9 @@ vim.opt.scrolloff = 10
 -- Highlight search text
 vim.opt.hlsearch = true
 
+-- Don't wrap lines
+vim.opt.wrap = false
+
 -- File explorer default width
 -- vim.g.netrw_winsize = 20
 

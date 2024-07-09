@@ -151,7 +151,8 @@ return {
 				-- But for many setups, the LSP (`tsserver`) will work just fine
 				tsserver = {},
 				-- python
-				jedi_language_server = {},
+				-- basedpyright = { settings = { basedpyright = { typeCheckingMode = "off" } } },
+				-- basedpyright = {},
 				sourcery = {},
 				lua_ls = {
 					-- cmd = {...},
@@ -185,12 +186,12 @@ return {
 				"lua-language-server",
 
 				-- python stuff
-				"jedi-language-server",
-				"black",
-				"isort",
-				"ruff",
+				-- "jedi-language-server",
+				-- "black",
+				-- "isort",
+				-- "basedpyright",
+				-- "ruff",
 				"djlint",
-				"isort",
 				"sourcery",
 
 				-- javascript stuff
